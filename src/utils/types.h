@@ -2,8 +2,6 @@
 
 #include <complex>
 
-#include "vector3.h"
-
 // https://en.wikipedia.org/wiki/C_data_types
 
 // 8 bytes
@@ -19,7 +17,4 @@ typedef unsigned long uint32; // 0 => 4 294 967 295
 typedef signed long sint32; // −2 147 483 647 => 2 147 483 64
 
 // Complex type
-typedef std::complex<double> complex;
-
-// Type aliases for convinience
-using Color = maths::Vector3;  // RGB color
+typedef std::complex<float> complex;

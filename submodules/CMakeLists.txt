@@ -1,0 +1,16 @@
+# GLM
+
+set(GLM_DIR ${CMAKE_CURRENT_SOURCE_DIR}/glm)
+
+# STB
+
+set(STB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/stb)
+
+# STATIC LIBRARIES
+
+add_library(STATIC_LIBRARIES INTERFACE)
+
+target_include_directories(STATIC_LIBRARIES INTERFACE
+  ${GLM_DIR}/glm
+  ${STB_DIR}
+)

@@ -13,16 +13,18 @@ if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "RELEASE")
 endif()
 
+add_subdirectory(submodules)
+
 include_directories(
     src
-    src/maths
+    src/utils
 )
 
 # Default compilation flags
-set(CMAKE_CXX_FLAGS "-pedantic -Wall -Wextra -fsanitize=address -Wno-deprecated-declarations")
+set(CMAKE_CXX_FLAGS "-pedantic -Wall -Wextra -Wno-deprecated-declarations -Wno-unused-parameter -Wno-sign-compare -Wno-missing-field-initializers")
 
 # Debug compilation flags
-set(CMAKE_CXX_FLAGS_DEBUG "-g3 -O0 -DDEBUG")
+set(CMAKE_CXX_FLAGS_DEBUG "-fsanitize=address -g3 -O0 -DDEBUG")
 
 # Release compilation flags
 set(CMAKE_CXX_FLAGS_RELEASE "-Ofast -DRELEASE")
@@ -30,3 +32,4 @@ set(CMAKE_CXX_FLAGS_RELEASE "-Ofast -DRELEASE")
 # Exec
 add_executable(fourier)
 target_sources(fourier PRIVATE "src/main.cpp")
+target_link_libraries(fourier PRIVATE STATIC_LIBRARIES)

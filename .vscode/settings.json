@@ -78,6 +78,21 @@
         "codecvt": "cpp",
         "fstream": "cpp",
         "iomanip": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "__tree": "cpp",
+        "csignal": "cpp",
+        "future": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "strstream": "cpp",
+        "typeindex": "cpp",
+        "unordered_set": "cpp",
+        "valarray": "cpp",
+        "variant": "cpp",
+        "cfenv": "cpp",
+        "__memory": "cpp",
+        "filesystem": "cpp",
+        "*.ipp": "cpp"
     }
 }
